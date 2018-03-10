@@ -1,0 +1,141 @@
+<!doctype html>
+<head>
+<style>
+#body{color: #666;
+color: rgba(0, 0, 0, 0.6);
+text-shadow: .2px .9px  1px #fff;}
+#body{margin:auto; width:100%;padding:auto;max-width:2000px; min-width:40px;overflow:hidden;font:auto;}
+#mc{margin:auto;padding:0px 300px 0px 0px;overflow:hidden;max-width:2000px; min-width:240px;}
+#display{border-sizing:border-box;border-style:inset; border-width:4px 8px 10px 8px;background-color:#bce080;padding:30px 10px 30px 90px;font-size:40px;margin:0px;overflow:hidden;margin:auto;max-width:2000px; min-width:240px;}
+input[type="button"]{font-size:27px;width:18%;style:solid;overflow:hidden;border-radius: 12%;}
+input[type="button"]{background-color:#999;border:2px solid; color:;border-style:ridge;box-shadow:1px 1px 1px 2px #999;text-shadow:1px 1px 1px 2px #999;opacity:15;}
+input[type="button"]:hover{color:green;background-color:#bcb;border-radius: 60px;}
+.green{background-color:#bce040;color:white;border-color:;border-style:solid;border-width:6px;overflow:hidden;}
+.red{background-color:red;color:white;border-color:;border-style:solid;border-width:6px;overflow:hidden;}
+.white{background-color:#353535;color:white;border-color:;border-style:solid;border-width:6px;overflow:hidden;}
+p{line-height:10px;}
+</style>
+
+<script>
+function  my(){alert('This calculator is desined and develope by Karan Soni')}
+function v(value){document.getElementById('display').value+=value;}
+function c(val){document.getElementById('display').value=val;}
+function e(){
+try{ c(eval(document.getElementById('display').value))
+}catch(e)
+{c('Error')}}
+function sr(){display.value=Math.sqrt(display.value);}
+</script>
+
+<!----time--->
+<script>
+
+function time(){
+var A= new Date();
+document.getElementById("clock").innerHTML='Time:'+A.toLocaleTimeString();
+setTimeout(time,1000);}
+window.onload=time;
+</script>
+
+<style>
+#clock{font: bold 24pt sans;background: #665;padding: 10px;border: solid black 2px;
+border-radius: 10px;}
+</style>
+
+<title>Calculater</title>
+</head>
+
+<body >
+<div id="body">
+<div id="clock"></div>
+<div id="coloropt"><fieldset style="background-color:aliceblue;border-style:solid;"><legend><h1>Settings</h1></legend>
+<h2>You can Change Background-Color from here:</h2>
+<input type="text" id="color" style="border-style:inset;"placeholder="Enter color Name like Red">
+<input type="submit" onclick="color()"><br>
+<!-----this section for fount size change------>
+<h2>You can Change Fount & Display Color from here:</h2>
+
+<input type="text" id="fon" style="border-style:inset;"placeholder="Enter Fount Color like red">
+<input type="submit" onclick="fount()">
+<input type="text" id="font" style="border-style:inset;"placeholder="Enter Display Color like Blue">
+<input type="submit" onclick="font()"><br>
+<h2>You can Change Button's Color from here:</h2>
+<input type="text" id="bc" style="border-style:inset;"placeholder="Enter Button's color Name like green">
+<input type="submit" onclick="bc()">
+<script>
+function bc(){document.getElementById('a').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('b').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('c').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('d').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('e').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('f').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('g').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('h').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('i').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('j').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('k').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('l').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('m').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('n').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('o').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('p').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('q').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('r').style.backgroundColor=document.getElementById('bc').value
+document.getElementById('s').style.backgroundColor=document.getElementById('bc').value
+} </script>
+</fieldset>
+
+
+</div>
+<script>function fount(){document.body.style.color=document.getElementById('fon').value}</script>
+<script>function color(){document.body.style.backgroundColor=document.getElementById('color').value;}</script>
+<script>function font(){document.getElementById('display').style.backgroundColor=document.getElementById('font').value;}
+document.body.style.TextSize=1;</script>
+
+<div id="mc">
+<center>
+<h1>Calculater</h1>
+<fieldset style="border-style:solid;background-color:#353535;border-width:15px 15px 15px 15px;margin:auto;max-width:200px;min-width:600px;"overflow:hidden;><br>
+<input type="text" id="display" name="display" maxlength="30" style="inset;"style=";margin:auto;max-width:200px;min-width:600px;"overflow:hidden;">
+<!-----buttons--------->
+<br>
+<div id="button"><br>
+<fieldset style="border-style:outset;border-width:10px 10px 10px 10px;">
+<p>
+<input type="button" id='a' value="7" onclick='v("7")'/>
+<input type="button" id='b' value="8" onclick='v("8")'/>
+<input type="button" id='c' value="9" onclick='v("9")'/>
+<input type="button" id='d' value="/" onclick='v("/")'>
+<input type="button" class="green" value="C" onclick='c("0")'><br>
+
+<input type="button"  id='e' value="4" onclick='v("4")'>
+<input type="button"  id='f' value="5" onclick='v("5")'>
+<input type="button"  id='g' value="6" onclick='v("6")'>
+<input type="button"  id='h' value="X" onclick='v("*")'>
+<input type="button" class="green" value="AC" onclick='c("")'><br>
+
+<input type="button"  id='i' value="1" onclick='v("1")'>
+<input type="button"  id='j' value="2" onclick='v("2")'>
+<input type="button" id='k'  value="3" onclick='v("3")'>
+<input type="button"  id='l' value="-" onclick='v("-")'>
+<input type="button" class="red" value="Off" onclick="window.close()"><br>
+
+<input type="button" id='m' value="0" onclick='v("0")'>
+<input type="button" id='n' value="00" onclick='v("00")'>
+<input type="button" id='o' value="." onclick='v(".")'>
+<input type="button" id='p' value="+" onclick='v("+")'>
+<input type="button"class="white" value="About" onclick="my()"><br>
+<input type="button" value="sqrt" onclick="sr()";>
+<input type="button"  id='q' value="000" onclick='v("000")' style="overflow:hidden;">
+<input type="button"  id='r' value="Enter" onclick='e()'style="width:20%;">
+<input type="button"  id='s' value="%" onclick='v("/100")'style="width:20%;">
+<strong><h1>&copy;2016 Karan Soni</h1></strong>
+
+</fieldset></fieldset></form>
+
+</div></div></body></html>
+
+
+
+
+
